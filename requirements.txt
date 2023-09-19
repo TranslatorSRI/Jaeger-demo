@@ -1,0 +1,12 @@
+fastapi==0.85.0
+httpx==0.18.2
+uvicorn
+opentelemetry-sdk
+# exporting traces for jaeger
+opentelemetry-exporter-otlp-proto-http
+
+# instrumentation for fast api and httpx 
+opentelemetry-instrumentation-fastapi
+opentelemetry-instrumentation-httpx
+# for more pre-implemented instrumentations: 
+#   https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation
