@@ -37,7 +37,7 @@ def instrument(app):
         )
     )
 
-    # create an exporter    
+    # create an exporter  to jaeger   
     jaeger_exporter = OTLPSpanExporter(endpoint="http://127.0.0.1:4318/v1/traces")
 
 

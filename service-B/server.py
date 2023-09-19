@@ -52,12 +52,9 @@ def instrument(app):
         )
     )
 
-    # create an exporter
-    # jaeger_exporter = JaegerExporter(
-    #     agent_host_name="localhost",
-    #     agent_port=6831,
-    # )
+    # create an exporter- to jaeger     
     jaeger_exporter = OTLPSpanExporter(endpoint="http://127.0.0.1:4318/v1/traces")
+    
     # here we use the exporter to export each span in a trace
     trace.get_tracer_provider().add_span_processor(
         BatchSpanProcessor(jaeger_exporter)
