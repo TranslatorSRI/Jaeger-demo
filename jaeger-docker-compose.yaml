@@ -8,6 +8,5 @@ services:
       - "6831:6831"
     environment:
       - LOG_LEVEL=debug
-  networks:
-    jaeger-net:
+
     
